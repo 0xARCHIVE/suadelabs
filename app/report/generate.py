@@ -6,7 +6,12 @@ from app.report.datatypes import CommissionReport, ErrorResponse, Report
 
 
 def calc_num_customers(orders: List[Orders]) -> int:
-    raise NotImplementedError
+    unique_customers = set()
+    if not orders:
+        return 0
+    for order in orders:
+        unique_customers.add(order.customer_id)
+    return len(unique_customers)
 
 
 def calc_discount_stats(orders: List[Orders]) -> Tuple[float, float]:
