@@ -21,6 +21,14 @@ python run.py
 
 I would use Gunicorn (or something similar) in production.
 
+### Report Endpoint
+
+The server will be created on `127.0.0.1:8080` by default. The API has one endpoint:
+
+```
+/report/YYYY/MM/DD
+```
+
 ## Development
 
 ### Pre-commit Checks
@@ -50,3 +58,5 @@ pytest --cov=app tests/
 ## General Comments
 
 * I have deliberately tried to focus on code readability, as opposed to optimisation ("premature optimisation is the root of all evil"). The current dataset is very small once filtered by date (tens of items).
+
+* I have supplied an SQLite database file for convenience (`app.db`). I've simply recreated the structure from the CSV files and imported the data.
