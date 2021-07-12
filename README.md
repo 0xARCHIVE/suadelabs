@@ -1,5 +1,15 @@
 # Suade Labs Coding Test
 
+![Python >= 3.9.6](https://img.shields.io/badge/python-%3E%3D%203.9.6-blue?style=flat-square)
+
+## General Comments
+
+* I have worked on this little project in my free time, around quite a busy work schedule.
+
+* I have deliberately tried to focus on code readability, as opposed to optimisation ("premature optimisation is the root of all evil"). The current dataset is very small once filtered by date (tens of items).
+
+* I have supplied an SQLite database file for convenience (`app.db`). I've simply recreated the structure from the CSV files and imported the data.
+
 ## Installation
 
 I have chosen to use `poetry` and `pyenv`. To setup and use the environment:
@@ -62,9 +72,3 @@ For test coverage:
 ```shell
 pytest --cov=app tests/
 ```
-
-## General Comments
-
-* I have deliberately tried to focus on code readability, as opposed to optimisation ("premature optimisation is the root of all evil"). The current dataset is very small once filtered by date (tens of items).
-
-* I have supplied an SQLite database file for convenience (`app.db`). I've simply recreated the structure from the CSV files and imported the data.
