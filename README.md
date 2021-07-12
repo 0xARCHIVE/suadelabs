@@ -29,6 +29,14 @@ The server will be created on `127.0.0.1:8080` by default. The API has one endpo
 /report/YYYY/MM/DD
 ```
 
+Useful error messages are provided to the user, for example:
+
+```javascript
+{
+  'error': 'Invalid date entered'
+}
+```
+
 ## Development
 
 ### Pre-commit Checks
@@ -60,5 +68,3 @@ pytest --cov=app tests/
 * I have deliberately tried to focus on code readability, as opposed to optimisation ("premature optimisation is the root of all evil"). The current dataset is very small once filtered by date (tens of items).
 
 * I have supplied an SQLite database file for convenience (`app.db`). I've simply recreated the structure from the CSV files and imported the data.
-
-* The endpoint returns an empty response when an error occurred (e.g. invalid date supplied). This isn't particularly useful to the user, so a point of improvement would be to have it return a useful error response.

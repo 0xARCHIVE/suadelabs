@@ -1,21 +1,30 @@
-from datetime import date
-from typing import List
+from datetime import date, timedelta
+from typing import List, Union
 
 from app.models import Orders
-from app.report import Report
+from app.report import ErrorResponse, Report
 
 
 def get_orders_by_date(_date: date) -> List[Orders]:
-    return []
+    if not _date:
+        return []
+    orders = Orders.query.filter(
+        Orders.created_at >= _date,
+        Orders.created_at <= _date + timedelta(days=1),
+    ).all()
+    return orders
 
 
-def generate_report(year: int, month: int, day: int) -> Report:
+def generate_report(
+    year: int, month: int, day: int
+) -> Union[Report, ErrorResponse]:
     try:
         _date = date(year, month, day)
     except (ValueError, TypeError):
-        return Report()
+        return ErrorResponse("Invalid date entered")
 
-    return Report(_date)
+    get_orders_by_date(_date)
+    return ErrorResponse("Not yet implemented")
 
 
 #    orders = get_orders_by_date(_date)
