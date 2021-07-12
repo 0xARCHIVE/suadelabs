@@ -1,6 +1,6 @@
 import unittest
 
-from app.report import ErrorResponse
+from app.report.datatypes import ErrorResponse
 from app.report.generate import generate_report, get_orders_by_date
 
 

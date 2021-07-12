@@ -2,7 +2,7 @@ from datetime import date, timedelta
 from typing import List, Union
 
 from app.models import Orders
-from app.report import ErrorResponse, Report
+from app.report.datatypes import ErrorResponse, Report
 
 
 def get_orders_by_date(_date: date) -> List[Orders]:
