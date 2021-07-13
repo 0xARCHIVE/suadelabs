@@ -1,7 +1,14 @@
+"""Database models.
+
+These are the relevant tables from the CSV files provided in the coding test.
+"""
+
 from app.database import db
 
 
 class Orders(db.Model):
+    """Orders table (orders.csv)."""
+
     __tablename__ = "orders"
 
     id = db.Column(db.Integer, primary_key=True)
@@ -13,6 +20,8 @@ class Orders(db.Model):
 
 
 class OrderLines(db.Model):
+    """OrderLines table (orderlines.csv)."""
+
     __tablename__ = "order_lines"
 
     order_id = db.Column(
@@ -31,6 +40,8 @@ class OrderLines(db.Model):
 
 
 class Commissions(db.Model):
+    """Commissions table (commissions.csv)."""
+
     __tablename__ = "commissions"
 
     date = db.Column(db.Date, primary_key=True)
@@ -39,6 +50,8 @@ class Commissions(db.Model):
 
 
 class ProductPromotions(db.Model):
+    """ProductPromotions table (product_promotions.csv)."""
+
     __tablename__ = "product_promotions"
 
     date = db.Column(db.Date, primary_key=True)

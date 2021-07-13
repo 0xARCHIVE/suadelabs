@@ -1,3 +1,5 @@
+"""A simple script to run the app using Flake's server (debug mode)."""
+
 from app.app import create_app
 
 app = create_app()
