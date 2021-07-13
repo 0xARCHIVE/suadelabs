@@ -1,6 +1,6 @@
 # Suade Labs Coding Test
 
-![Python >= 3.9.6](https://img.shields.io/badge/python-%3E%3D%203.9.6-blue?style=flat-square)
+![Python >= 3.9.6](https://img.shields.io/badge/python-%3E%3D%203.9.6-blue?style=flat-square) ![Testing 88%](https://img.shields.io/badge/coverage-88%25-green?style=flat-square)
 
 ## General Comments
 
