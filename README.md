@@ -8,6 +8,8 @@
 
 * I have deliberately tried to focus on code readability, as opposed to optimisation ("premature optimisation is the root of all evil"). The current dataset is very small once filtered by date (tens of items).
 
+* My git commits are too large and infrequent, and my docstrings don't have much thought put into them. This is mainly to speed up development, in the knowledge that this is a toy app.
+
 * I have supplied an SQLite database file for convenience (`app.db`). I've simply recreated the structure from the CSV files and imported the data.
 
 ## Installation
