@@ -1,4 +1,4 @@
-"""A simple script to run the app using Flake's server (debug mode)."""
+"""A simple script to run the app using Flask's server (debug mode)."""
 
 from app.app import create_app
 
